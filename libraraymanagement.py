@@ -14,9 +14,9 @@ class Book:
             "status": self.status
         }
 
-    #@staticmethod
+    @staticmethod
     def from_dict(data):
-        # """Convert dictionary to Book object."""
+         """Convert dictionary to Book object."""
         return Book(data["title"], data["author"], data["status"])
 
 
@@ -27,7 +27,7 @@ class Library:
         self.load_data()
 
     def load_data(self):
-        # """Load library data from a file."""
+         """Load library data from a file."""
         try:
             with open(self.filename, "r") as file:
                 data = json.load(file)
@@ -72,7 +72,7 @@ class Library:
             print(f"'{book.title}' by {book.author} - {status}")
 
 
-# Main Program
+
 library = Library()
 
 while True:
